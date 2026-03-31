@@ -3,7 +3,7 @@ import Product from './Product';
 import Cart from '../Cart/Cart';
 
 
-const Products = ({ productPromise, activeTab, setActiveTab }) => {
+const Products = ({ productPromise, activeTab, setActiveTab, carts, setCarts }) => {
     const products = use(productPromise);
     // console.log(products)
 
@@ -38,12 +38,18 @@ const Products = ({ productPromise, activeTab, setActiveTab }) => {
             {
                 activeTab === 'product' && <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10'>
                     {
-                        products.map(product => <Product key={product.id} product={product}></Product>)
+                        products.map(product => 
+                        <Product
+                            key={product.id}
+                            product={product}
+                            carts={carts}
+                            setCarts={setCarts}
+                        ></Product>)
                     }
                 </div>
             }
             {
-                activeTab === 'cart' && <Cart></Cart>
+                activeTab === 'cart' && <Cart carts={carts} setCarts={setCarts}></Cart>
             }
 
         </div>

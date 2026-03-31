@@ -16,7 +16,10 @@ const productPromise = fetchProducts();
 function App() {
 
   const [activeTab, setActiveTab] = useState('product');
-  console.log(activeTab)
+  const [carts, setCarts] = useState([]);
+  // console.log(carts)
+
+  // console.log(activeTab)
   return (
     <>
       <Navbar></Navbar>
@@ -28,6 +31,8 @@ function App() {
           productPromise={productPromise}
           activeTab={activeTab}
           setActiveTab={setActiveTab}
+          carts={carts}
+          setCarts={setCarts}
         ></Products>
       </Suspense>
 

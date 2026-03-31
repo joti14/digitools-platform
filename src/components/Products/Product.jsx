@@ -3,12 +3,13 @@ import PricingFeature from './PricingFeature';
 import { FaCheck } from 'react-icons/fa';
 
 
-const Product = ({ product }) => {
+const Product = ({ product, carts, setCarts }) => {
     // console.log(product)
     const [isAddToCart, setIsAddToCart] = useState(false);
 
     const handleAddToCart = () => {
         setIsAddToCart(true);
+        setCarts([...carts, product]);
     }
 
     const { icon, name, description, price, period, features, tag, tagType } = product;
@@ -46,7 +47,8 @@ const Product = ({ product }) => {
                         <span className="flex items-center justify-center gap-2">
                             {isAddToCart && <FaCheck />}
                             <span>{isAddToCart ? 'Added to Cart' : 'Buy Now'}</span>
-                        </span></button>
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>
