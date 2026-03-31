@@ -33,9 +33,9 @@ const Banner = () => {
                         <button className="btn btn-primary bg-linear-to-r from-[#4f39f6] to-[rgb(149,20,250)] outline-none border-none px-4 py-6 rounded-4xl font-semibold text-lg text-white">
                             Explore Products
                         </button>
-                        <button className="btn btn-primary btn-outline px-4 py-6 rounded-4xl font-semibold text-lg flex items-center gap-3 border-2">
-                            <Play className="w-5 h-5 text-[#4f39f6]" />
-                            <span className="bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent">
+                        <button className="btn btn-primary btn-outline px-4 py-6 rounded-4xl font-semibold text-lg flex items-center gap-3 border-2 hover:bg-linear-to-r from-[#4f39f6] to-[rgb(149,20,250)] transition hover:text-white group">
+                            <Play className="w-5 h-5 text-[#4f39f6]group-hover:text-white" />
+                            <span className="bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent group-hover:text-white">
                                 Watch Demo
                             </span>
                         </button>
