@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import Product from './Product';
 
-const Products = ({productPromise}) => {
+const Products = ({ productPromise }) => {
     const products = use(productPromise);
     // console.log(products)
     return (
@@ -12,9 +12,12 @@ const Products = ({productPromise}) => {
             </div>
 
             {/* buttons */}
-            <div className='flex justify-center'>
-                <button className='btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-r-none rounded-l-xl text-white'>Products</button>
-                <button className='btn rounded-l-none rounded-r-xl'>Cart (2)</button>
+            <div className='flex justify-center '>
+
+                <div className='inline-flex rounded-3xl shadow-sm p-1.5 overflow-hidden'>
+                    <button className='btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-r-none rounded-l-2xl text-white'>Products</button>
+                    <button className='btn rounded-l-none rounded-r-2xl'>Cart (2)</button>
+                </div>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10'>

@@ -20,7 +20,7 @@ const Banner = () => {
                     <h1 className="text-4xl lg:text-5xl font-bold text-black leading-tight">
                         Supercharge Your
                         <br />
-                        <span className="text-4xl lg:text-5xl font-bold  text-black">
+                        <span className="text-4xl lg:text-5xl font-bold  bg-linear-to-r from-[rgba(79,57,246,1)] to-[rgba(149,20,250,1)] bg-clip-text text-transparent">
                             Digital Workflow
                         </span>
                     </h1>
