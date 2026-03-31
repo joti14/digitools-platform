@@ -1,8 +1,8 @@
 import { ShoppingCart } from "lucide-react";
 
-const NavBar = () => {
+const NavBar = ({ carts }) => {
   return (
-    <div className="navbar w-11/12 mx-auto">
+    <div className="navbar sticky top-0 z-50 bg-white">
       <div className="navbar-start">
         <div className="bg-linear-to-r from-[rgba(79,57,246,1)] to-[rgba(149,20,250,1)] bg-clip-text text-transparent font-extrabold text-3xl">
           DigiTools
@@ -28,7 +28,10 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-5">
-        <ShoppingCart className="cursor-pointer"/>
+        <div className="relative inline-block">
+          <ShoppingCart className="cursor-pointer" />
+          <span className="absolute -top-4 left-2 bg-red-500 rounded-full px-1 min-w-5 flex items-center justify-center text-white">{carts.length}</span>
+        </div>
         <a href="" className="font-semibold text-lg">Login</a>
         <a className="btn bg-linear-to-r from-[rgba(79,57,246,1)] to-[rgba(149,20,250,1)] rounded-full text-white">Get Started</a>
       </div>

@@ -22,7 +22,7 @@ function App() {
   // console.log(activeTab)
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar carts={carts}></Navbar>
       <Banner></Banner>
       <Stats></Stats>
 
