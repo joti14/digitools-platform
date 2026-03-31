@@ -1,9 +1,12 @@
 import React, { use } from 'react';
 import Product from './Product';
+import Cart from '../Cart/Cart';
 
-const Products = ({ productPromise }) => {
+
+const Products = ({ productPromise, activeTab, setActiveTab }) => {
     const products = use(productPromise);
     // console.log(products)
+
     return (
         <div className='max-w-7xl mx-auto py-20 space-y-3'>
             <div className='text-center space-y-3'>
@@ -12,19 +15,36 @@ const Products = ({ productPromise }) => {
             </div>
 
             {/* buttons */}
-            <div className='flex justify-center '>
-
-                <div className='inline-flex rounded-3xl shadow-sm p-1.5 overflow-hidden'>
-                    <button className='btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-r-none rounded-l-2xl text-white'>Products</button>
-                    <button className='btn rounded-l-none rounded-r-2xl'>Cart (2)</button>
+            <div className='flex justify-center'>
+                <div className="tabs tabs-box rounded-full  inline-flex">
+                    <input
+                        type="radio"
+                        name="my_tabs_1"
+                        className="tab rounded-full text-base w-40"
+                        aria-label="Products"
+                        defaultChecked
+                        onClick={() => setActiveTab('product')}
+                    />
+                    <input
+                        type="radio"
+                        name="my_tabs_1"
+                        className="tab rounded-full text-base w-40"
+                        aria-label="cart"
+                        onClick={() => setActiveTab('cart')}
+                    />
                 </div>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10'>
-                {
-                    products.map(product => <Product key={product.id} product={product}></Product>)
-                }
-            </div>
+            {
+                activeTab === 'product' && <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10'>
+                    {
+                        products.map(product => <Product key={product.id} product={product}></Product>)
+                    }
+                </div>
+            }
+            {
+                activeTab === 'cart' && <Cart></Cart>
+            }
 
         </div>
     );

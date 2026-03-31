@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Footer from './components/Footer/Footer'
@@ -15,6 +15,8 @@ const productPromise = fetchProducts();
 
 function App() {
 
+  const [activeTab, setActiveTab] = useState('product');
+  console.log(activeTab)
   return (
     <>
       <Navbar></Navbar>
@@ -22,7 +24,11 @@ function App() {
       <Stats></Stats>
 
       <Suspense fallback={<span className="loading loading-dots loading-lg"></span>}>
-        <Products productPromise={productPromise}></Products>
+        <Products
+          productPromise={productPromise}
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+        ></Products>
       </Suspense>
 
       <Footer></Footer>
