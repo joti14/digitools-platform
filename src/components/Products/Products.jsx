@@ -29,7 +29,7 @@ const Products = ({ productPromise, activeTab, setActiveTab, carts, setCarts }) 
                         type="radio"
                         name="my_tabs_1"
                         className="tab rounded-full text-base w-40"
-                        aria-label="cart"
+                        aria-label={`Cart (${carts.length})`}
                         onClick={() => setActiveTab('cart')}
                     />
                 </div>

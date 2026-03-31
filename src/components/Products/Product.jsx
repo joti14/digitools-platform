@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PricingFeature from './PricingFeature';
 import { FaCheck } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 
 const Product = ({ product, carts, setCarts }) => {
@@ -9,7 +10,16 @@ const Product = ({ product, carts, setCarts }) => {
 
     const handleAddToCart = () => {
         setIsAddToCart(true);
+
+        const isFound = carts.find(item => item.id === product.id);
+
+        if(isFound) {
+            toast.error('Item already in cart');
+            return;
+        }
+
         setCarts([...carts, product]);
+        toast.success('Item added to cart!');
     }
 
     const { icon, name, description, price, period, features, tag, tagType } = product;

@@ -3,6 +3,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-body {
+* {
   font-family: "Manrope", sans-serif;
 }

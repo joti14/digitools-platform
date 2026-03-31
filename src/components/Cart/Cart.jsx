@@ -1,5 +1,6 @@
 import React from 'react';
 import { LuShoppingCart } from 'react-icons/lu';
+import { toast } from 'react-toastify';
 
 const Cart = ({ carts, setCarts }) => {
 
@@ -8,11 +9,13 @@ const Cart = ({ carts, setCarts }) => {
 
     const handlePayment = () => {
         setCarts([]);
+        toast.success("Payment Successfull!");
     }
 
     const handleDelete = (item) => {
         const filterdItems = carts.filter(i => i.id != item.id);
         setCarts(filterdItems);
+        toast.error("Item deleted!");
     }
     return (
         <div className='space-y-5 mt-10 shadow-sm p-10 rounded-2xl'>
