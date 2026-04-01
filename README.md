@@ -1,16 +1,57 @@
-# React + Vite
+## 🚀 Digitools Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Digitools Platform is a modern, responsive web application that showcases digital tools and services with an interactive shopping experience. Users can explore products, view detailed features, and manage a cart with real-time updates and notifications.
 
-Currently, two official plugins are available:
+## 📖 Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Digitools Platform is designed to provide a smooth and dynamic user experience for browsing and purchasing digital tools. It includes product listings, cart functionality, and interactive UI components built with modern frontend technologies.
 
-## React Compiler
+The project focuses on clean UI design, state management, and user-friendly interactions such as cart toggling, notifications, and responsive layouts.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used
+- ⚛️ React.js
+- 🎨 Tailwind CSS / DaisyUI
+- 📦 JavaScript (ES6+)
+- 🔔 React-Toastify (for notifications)
+- 🌐 JSON (for product data)
 
-## Expanding the ESLint configuration
+## ✨ Features
+# 🛒 1. Interactive Cart System
+- Add and remove products dynamically
+- Real-time cart count in navbar
+- Total price calculation
+- "Proceed to Checkout" clears the cart
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 🔄 2. Product & Cart Toggle View
+- Toggle between Products and Cart sections
+- Default view shows product listings
+- Empty cart message when no items are added
+
+# 🃏 3. Dynamic Product Display
+- Products loaded from JSON data
+- 3-column responsive layout
+- Each card includes:
+    - Name, description, price, period
+    - Tags (popular, new, best seller)
+    - Feature list
+    - Buy Now button
+
+# 📌 Additional Highlights
+- 🎯 Figma-based UI design (Navbar, Banner, Stats, Steps, Pricing, Footer)
+- 📱 Fully responsive across mobile, tablet, and desktop
+- 🔔 Toast notifications for:
+    - Add to cart
+    - Remove item
+    - Checkout
+- ❌ Remove individual products from cart
+- 🧮 Cart total calculation
+
+## 📷 Sections Included
+- 🧭 Navbar with cart icon
+- 🎯 Banner section
+- 📊 Stats section
+- 📦 Product section
+- 🛒 Cart section
+- 🪜 Steps section
+- 💰 Pricing section
+- 🦶 Footer
