@@ -15,7 +15,7 @@ The project focuses on clean UI design, state management, and user-friendly inte
 - 🔔 React-Toastify (for notifications)
 - 🌐 JSON (for product data)
 
-## ✨ Features
+# ✨ Features
 ## 🛒 1. Interactive Cart System
 - Add and remove products dynamically
 - Real-time cart count in navbar
