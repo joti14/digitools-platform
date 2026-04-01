@@ -2,16 +2,16 @@ import React from 'react';
 
 const Pricing = () => {
     return (
-        <div className='max-w-7xl mx-auto my-25 space-y-4'>
+        <div className='max-w-7xl mx-auto my-25 space-y-4 px-4'>
             <div className='text-center space-y-4'>
-                <h2 className='text-5xl font-extrabold'>Simple, Transparent Pricing</h2>
+                <h2 className='text-3xl md:text-5xl font-extrabold'>Simple, Transparent Pricing</h2>
                 <p className='text-[#627382]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             </div>
 
-            <div className='mt-10 grid grid-cols-3'>
+            <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center'>
 
                 {/* Starter Card */}
-                <div className="card w-96 bg-base-200 shadow-sm">
+                <div className="card w-full max-w-sm bg-base-200 shadow-sm">
                     <div className="card-body flex flex-col">
                         <div className="space-y-1">
                             <h2 className="text-3xl font-bold">Starter</h2>
@@ -56,9 +56,9 @@ const Pricing = () => {
                 </div>
 
                 {/* Pro Card */}
-                <div className="card w-96 bg-linear-to-r from-[rgba(79,57,246,1)] to-[rgba(149,20,250,1)] shadow-sm text-white">
+                <div className="card w-full max-w-sm bg-linear-to-r from-[rgba(79,57,246,1)] to-[rgba(149,20,250,1)] shadow-sm text-white">
                     <div className="card-body flex flex-col relative">
-                        <span className="badge badge-xs badge-warning badge-soft p-3 absolute -top-2 left-30 rounded-full text-xs">
+                        <span className="badge badge-xs badge-warning badge-soft badge-outline p-3 absolute -top-2 left-30 rounded-full text-xs">
                             Most Popular
                         </span>
                         <div className="space-y-1">
@@ -118,7 +118,7 @@ const Pricing = () => {
                 </div>
 
                 {/* Enterprise Card */}
-                <div className="card w-96 bg-base-200 shadow-sm">
+                <div className="card w-full max-w-sm bg-base-200 shadow-sm md:col-span-2 lg:col-span-1 md:max-w-sm md:mx-auto">
                     <div className="card-body flex flex-col">
                         <div className="space-y-1">
                             <h2 className="text-3xl font-bold">Enterprise</h2>
