@@ -17,10 +17,10 @@ const Banner = () => {
                         </span>
                     </div>
 
-                    <h1 className="text-4xl lg:text-5xl font-bold text-black leading-tight">
+                    <h1 className="text-5xl lg:text-5xl font-bold text-black leading-tight">
                         Supercharge Your
                         <br />
-                        <span className="text-4xl lg:text-5xl font-bold  bg-linear-to-r from-[rgba(79,57,246,1)] to-[rgba(149,20,250,1)] bg-clip-text text-transparent">
+                        <span className="text-5xl lg:text-5xl font-bold  bg-linear-to-r from-[rgba(79,57,246,1)] to-[rgba(149,20,250,1)] bg-clip-text text-transparent">
                             Digital Workflow
                         </span>
                     </h1>
@@ -30,12 +30,12 @@ const Banner = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-4 pt-4">
-                        <button className="btn btn-primary bg-linear-to-r from-[#4f39f6] to-[rgb(149,20,250)] outline-none border-none px-4 py-6 rounded-4xl font-semibold text-lg text-white">
+                        <button className="btn btn-primary bg-linear-to-r from-[#4f39f6] to-[rgb(149,20,250)] outline-none border-none px-4 py-6 rounded-4xl font-semibold text-lg text-white hover:scale-[1.02] transition-all duration-200">
                             Explore Products
                         </button>
                         <button className="btn btn-primary btn-outline px-4 py-6 rounded-4xl font-semibold text-lg flex items-center gap-3 border-2 hover:bg-linear-to-r from-[#4f39f6] to-[rgb(149,20,250)] transition hover:text-white group">
-                            <Play className="w-5 h-5 text-[#4f39f6]group-hover:text-white" />
-                            <span className="bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent group-hover:text-white">
+                            <Play className="w-5 h-5 text-[#4f39f6] group-hover:text-white" />
+                            <span className="bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent group-hover:text-white hover:scale-[1.02] transition-all duration-200">
                                 Watch Demo
                             </span>
                         </button>

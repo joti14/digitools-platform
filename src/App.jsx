@@ -5,6 +5,9 @@ import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
 import Products from './components/Products/Products'
 import Stats from './components/Stats/Stats'
+import Pricing from './components/Pricing/Pricing'
+import ReadyToTransform from './components/ReadyToTransform/ReadyToTransform'
+import GetStarted from './components/GetStarted/GetStarted'
 
 const fetchProducts = async () => {
   const res = await fetch('/products.json');
@@ -35,6 +38,10 @@ function App() {
           setCarts={setCarts}
         ></Products>
       </Suspense>
+      
+      <GetStarted />
+      <Pricing />
+      <ReadyToTransform />
 
       <Footer></Footer>
     </>
