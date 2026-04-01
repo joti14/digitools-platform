@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
 import PricingFeature from './PricingFeature';
 import { FaCheck } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
 
 const Product = ({ product, carts, setCarts }) => {
-    const [isAddToCart, setIsAddToCart] = useState(false);
+    const isAddToCart = carts.find(item => item.id === product.id)
 
     const handleAddToCart = () => {
-        setIsAddToCart(true);
 
         const isFound = carts.find(item => item.id === product.id);
 

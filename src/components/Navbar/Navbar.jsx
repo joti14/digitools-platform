@@ -65,7 +65,7 @@ const NavBar = ({ carts }) => {
         <div className="navbar-end gap-6">
           <div className="relative inline-block">
             <ShoppingCart className="cursor-pointer w-6 h-6" />
-            <span className="absolute -top-3 left-3 bg-red-500 rounded-full min-w-5 h-5 flex items-center justify-center text-white text-xs font-bold px-1">
+            <span className={`${carts.length === 0 ? 'hidden' : ''} absolute -top-3 left-3 bg-red-500 rounded-full min-w-5 h-5 flex items-center justify-center text-white text-xs font-bold px-1`}>
               {carts.length}
             </span>
           </div>
